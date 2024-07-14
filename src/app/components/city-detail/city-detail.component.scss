@@ -1,0 +1,21 @@
+.city-detail-container{
+  padding: 40px;
+}
+.title{
+  font-weight: bold;
+}
+.fa-arrow-left{
+  margin-right: 10px;
+}
+.back-city-list-container{
+  padding: 5px 10px;
+  display: inline-block;
+}
+.back-city-list-container:hover{
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.back-city-list-title{
+  font-weight:600;
+}

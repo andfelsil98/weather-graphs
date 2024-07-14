@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WeatherByCity } from 'src/app/core/interfaces/weather-by-city';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { ToastrService } from 'ngx-toastr';
@@ -12,6 +12,7 @@ export class CityDetailComponent implements OnInit {
   cityCode: string = '';
   weatherByCity: WeatherByCity | null = null;
   public route = inject(ActivatedRoute);
+  public router = inject(Router);
   public graphService = inject(GraphsService);
   private toastr = inject(ToastrService);
   ngOnInit(): void {
@@ -30,5 +31,9 @@ export class CityDetailComponent implements OnInit {
       }
     };
     this.graphService.getWeatherInfoByCity(this.cityCode).subscribe(weatherObserver);
+  }
+
+  returnToCityList(){
+    this.router.navigateByUrl('/city-list');
   }
 }
