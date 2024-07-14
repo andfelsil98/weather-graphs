@@ -1,0 +1,8 @@
+<div>
+  <div>
+    <i class="fa-solid fa-arrow-left mr-5"></i><span>Back to city list</span>
+  </div>
+  <p *ngIf="cityCode">{{ cityCode | city}}</p>
+  <!-- <p>{{date | dateFormat}}</p> -->
+  <app-chart *ngIf="weatherByCity" type="line" [cityCode]="cityCode" [weatherByCity]="weatherByCity"></app-chart>
+</div>
