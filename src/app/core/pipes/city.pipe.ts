@@ -8,9 +8,9 @@ export class CityPipe implements PipeTransform {
   transform(cityCode: string): string {
     switch(cityCode){
       case 'LWX':
-        return 'District of Columbia Forecast';
+        return 'District of Columbia';
       case 'TOP':
-        return 'Kansas Forecast';
+        return 'Kansas';
       default:
         return cityCode;
     }

@@ -2,6 +2,6 @@
   <div class="back-city-list-container" (click)="returnToCityList()">
     <i class="fa-solid fa-arrow-left"></i><span class="back-city-list-title">Back to city list</span>
   </div>
-  <p *ngIf="cityCode" class="title">{{ cityCode | city}}</p>
+  <p *ngIf="cityCode" class="title">{{ cityCode | city}} forecast</p>
   <app-chart *ngIf="weatherByCity" type="line" [cityCode]="cityCode" [weatherByCity]="weatherByCity"></app-chart>
 </div>

@@ -1,2 +1,12 @@
-<p>city-list works!</p>
-
+<div>
+  <h1 class="title">LIST OF CITIES</h1>
+  <div class="city-cards-container">
+    <div class="card" *ngFor="let city of cities" (click)="cityDetail(city.cityCode)">
+      <img [src]="city.src" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>{{city.cityCode | city}}
+        </b></h4>
+      </div>
+    </div>
+  </div>
+</div>
