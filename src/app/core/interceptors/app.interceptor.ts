@@ -11,9 +11,8 @@ export class AppInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       finalize(() => this.spinner.hide()),
       catchError((error: HttpErrorResponse) => {
-        // Manejo de errores si es necesario
         console.error('HTTP Error:', error);
-        return throwError(error); // Re-lanzar el error
+        return throwError(error);
       })
     );
   }
